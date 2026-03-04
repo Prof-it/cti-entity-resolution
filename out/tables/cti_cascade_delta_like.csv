@@ -1,0 +1,15 @@
+group,metric,before,after,delta,before_run,after_run
+Baseline,f_beta(0.8),0.943,0.976,+0.033,identities/roberta-base/v=20251005T122710Z,identities/roberta-base-cti-cascade/v=20251012T194754Z
+Baseline,f1,0.949,0.976,+0.027,identities/roberta-base/v=20251005T122710Z,identities/roberta-base-cti-cascade/v=20251012T194754Z
+Baseline,accuracy,0.97,0.986,+0.016,identities/roberta-base/v=20251005T122710Z,identities/roberta-base-cti-cascade/v=20251012T194754Z
+Baseline,precision,0.923,0.976,+0.053,identities/roberta-base/v=20251005T122710Z,identities/roberta-base-cti-cascade/v=20251012T194754Z
+Baseline,recall,0.976,0.976,+0.000,identities/roberta-base/v=20251005T122710Z,identities/roberta-base-cti-cascade/v=20251012T194754Z
+Baseline,pr_auc,0.958,0.985,+0.026,identities/roberta-base/v=20251005T122710Z,identities/roberta-base-cti-cascade/v=20251012T194754Z
+Baseline,roc_auc,0.985,0.995,+0.010,identities/roberta-base/v=20251005T122710Z,identities/roberta-base-cti-cascade/v=20251012T194754Z
+LLM,f_beta(0.8),0.962,0.991,+0.028,identities/llms/v=20251011T124244Z,identities/llms-cti-cascade/v=20251012T170643Z
+LLM,f1,0.959,0.988,+0.029,identities/llms/v=20251011T124244Z,identities/llms-cti-cascade/v=20251012T170643Z
+LLM,accuracy,0.977,0.993,+0.016,identities/llms/v=20251011T124244Z,identities/llms-cti-cascade/v=20251012T170643Z
+LLM,precision,0.975,1.0,+0.025,identities/llms/v=20251011T124244Z,identities/llms-cti-cascade/v=20251012T170643Z
+LLM,recall,0.943,0.976,+0.033,identities/llms/v=20251011T124244Z,identities/llms-cti-cascade/v=20251012T170643Z
+LLM,pr_auc,0.973,0.995,+0.022,identities/llms/v=20251011T124244Z,identities/llms-cti-cascade/v=20251012T170643Z
+LLM,roc_auc,0.99,1.0,+0.010,identities/llms/v=20251011T124244Z,identities/llms-cti-cascade/v=20251012T170643Z
