@@ -1,51 +1,110 @@
-# Export bundle (visuals + tables)
+# Export Bundle: Visuals and Tables
 
-This folder is a **standalone bundle** to reproduce thesis-style evaluation visuals and summary tables **offline** from sanitized artifacts under `data/reports/**/v=*/`.
+This repository contains the sanitized evaluation artifacts and reproducibility scripts accompanying the following publication:
 
-## What’s inside
+## Publication
 
-- `data/reports/…`: copied evaluation artifacts (sanitized CSV/JSON; may also include PNGs)
-- `scripts/generate_visuals.py`: regenerates ROC / PR / Confusion Matrix PNGs from
-  - `valid_predictions_sanitized.csv` / `test_predictions_sanitized.csv` (columns: `y_true;score;y_pred`)
-  - `metrics_sanitized.json` (reads the chosen `threshold` to match the report)
-- `scripts/summarize_tables.py`: regenerates thesis-style comparison tables from `metrics_table.csv`
+**Haßlinger, T., Lu, T. and Zöller, T. (2026).** *The Signal in the Noise: Semantic Entity Resolution for Cyber Threat Intelligence with Relational Context.* The Second International Conference on Advances in AI-based Systems and Applications, Lisbon, Portugal, 1–5 November 2026. **Accepted.**
+
+## Purpose
+
+This repository is a **standalone export bundle** for reproducing the evaluation visuals and summary tables reported in the paper **offline** from sanitized artifacts under `data/reports/**/v=*/`.
+
+The bundle is designed to reproduce the reported evaluation outputs without requiring access to the original or non-public experiment data.
+
+## What’s Inside
+
+* `data/reports/…`: Sanitized evaluation artifacts, including CSV/JSON files and, where available, PNGs
+* `scripts/generate_visuals.py`: Regenerates ROC, PR, confusion-matrix, and metrics visualizations from:
+
+  * `valid_predictions_sanitized.csv` / `test_predictions_sanitized.csv`
+  * expected columns: `y_true`, `score`, `y_pred`
+  * `metrics_sanitized.json`, using the stored `threshold` to match the corresponding report
+* `scripts/summarize_tables.py`: Regenerates thesis-style comparison tables from `metrics_table.csv`
 
 ## Quickstart
 
-1) Create a fresh environment and install deps (Windows-friendly with `py`):
+### 1. Create the environment
 
 From inside this folder:
 
-`py -m venv .venv`
+```bash
+py -m venv .venv
+./.venv/Scripts/python -m pip install -r requirements.txt
+```
 
-`./.venv/Scripts/python -m pip install -r requirements.txt`
+### 2. Locate the sanitized reports
 
-1) The sanitized report for the different experiments mentioned in the thesis are folders are under `data/reports/`.
+The sanitized reports for the experiments discussed in the paper are organized under:
 
-2) Generate plots for all runs:
+```text
+data/reports/
+```
 
-`./.venv/Scripts/python scripts/generate_visuals.py`
+### 3. Generate visualizations
 
-Plots are written under `out/plots/...`, mirroring the input folder structure, with filenames:
-`roc_valid.png`, `pr_valid.png`, `cm_valid.png`, `metrics_valid.png`, `roc_test.png`, `pr_test.png`, `cm_test.png`, `metrics_test.png`.
+Generate plots for all available runs:
 
-## Notebook option
+```bash
+./.venv/Scripts/python scripts/generate_visuals.py
+```
 
-If you prefer a notebook-style workflow (easy to tweak variables and rerun), open:
+Plots are written under:
 
-`Generate_Visuals.ipynb`
+```text
+out/plots/...
+```
+
+The output directory mirrors the input report structure.
+
+Generated files include:
+
+```text
+roc_valid.png
+pr_valid.png
+cm_valid.png
+metrics_valid.png
+roc_test.png
+pr_test.png
+cm_test.png
+metrics_test.png
+```
+
+## Notebook Option
+
+For an interactive workflow, open:
+
+```text
+Generate_Visuals.ipynb
+```
+
+This allows variables and visualization parameters to be inspected and adjusted interactively.
 
 ## Styling
 
-Edit the defaults in `scripts/generate_visuals.py` (the `Style` dataclass) to tweak colors.
+Visualization defaults can be adjusted in:
 
-## Summary tables
+```text
+scripts/generate_visuals.py
+```
 
-You can regenerate the thesis-style comparison tables from the per-run `metrics_table.csv` files:
+The `Style` dataclass contains the default visualization settings.
 
-`./.venv/Scripts/python scripts/summarize_tables.py`
+## Summary Tables
+
+Thesis-style comparison tables can be regenerated from the per-run `metrics_table.csv` files:
+
+```bash
+./.venv/Scripts/python scripts/summarize_tables.py
+```
 
 This writes:
 
-- `out/tables/table_21_like.csv` (model comparison)
-- `out/tables/cti_cascade_delta_like.csv` (before/after CTI cascade)
+* `out/tables/table_21_like.csv` — model comparison
+* `out/tables/cti_cascade_delta_like.csv` — before/after CTI cascade comparison
+
+## Reproducibility and Data Scope
+
+This repository contains **sanitized export artifacts** intended to support reproducibility of the evaluation reported in the publication.
+
+Original experiment data, sensitive information, and other non-public artifacts are intentionally excluded from this bundle.
