@@ -6,6 +6,17 @@ This repository contains the sanitized evaluation artifacts and reproducibility 
 
 **Haßlinger, T., Lu, T. and Zöller, T. (2026).** *The Signal in the Noise: Semantic Entity Resolution for Cyber Threat Intelligence with Relational Context.* The Second International Conference on Advances in AI-based Systems and Applications, Lisbon, Portugal, 1–5 November 2026. **Accepted.**
 
+```bibtex
+@inproceedings{hasslinger_lu_zoller_2026_cti,
+  author    = {Ha{\ss}linger, Timo and Lu, Tianxiang and Z{\"o}ller, Thomas},
+  title     = {The Signal in the Noise: Semantic Entity Resolution for Cyber Threat Intelligence with Relational Context},
+  booktitle = {The Second International Conference on Advances in AI-based Systems and Applications},
+  year      = {2026},
+  address   = {Lisbon, Portugal},
+  month     = nov,
+  note      = {Accepted, 1--5 November 2026}
+}
+```
 ## Purpose
 
 This repository is a **standalone export bundle** for reproducing the evaluation visuals and summary tables reported in the paper **offline** from sanitized artifacts under `data/reports/**/v=*/`.
