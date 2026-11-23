@@ -1,0 +1,20 @@
+Data and Figures License: Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+Copyright (c) 2026 Timo Haßlinger and Dr. Tianxiang Lu
+
+The evaluation artifacts in `data/` and the generated figures and tables in
+`out/` are licensed under the Creative Commons Attribution 4.0 International
+License (CC BY 4.0).
+
+You are free to share and adapt this material for any purpose, provided you
+give appropriate credit, provide a link to the license, and indicate if changes
+were made.
+
+Please credit the work as:
+
+  Haßlinger, T., Lu, T. and Zöller, T. (2026). The Signal in the Noise: Semantic
+  Entity Resolution for Cyber Threat Intelligence with Relational Context.
+  AINOW 2026, Lisbon, Portugal.
+  https://github.com/Prof-it/cti-entity-resolution
+
+Full license text: https://creativecommons.org/licenses/by/4.0/legalcode
