@@ -198,8 +198,8 @@ def _cascade_delta(reports_dir: Path) -> pd.DataFrame:
                     "before": round(b, 3),
                     "after": round(a, 3),
                     "delta": _fmt_delta(a, b),
-                    "before_run": str(before.run_dir.as_posix()),
-                    "after_run": str(after.run_dir.as_posix()),
+                    "before_run": before.run_dir.relative_to(reports_dir).as_posix(),
+                    "after_run": after.run_dir.relative_to(reports_dir).as_posix(),
                 }
             )
 
