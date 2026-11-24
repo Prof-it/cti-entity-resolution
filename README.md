@@ -154,4 +154,7 @@ The same design principle, evaluating and designing a detection pipeline stage b
 
 ## Licence
 
-A licence for this repository is being agreed with the co-authors. Until a `LICENSE` file is added, all rights are reserved by the authors.
+* Code (`scripts/`, `Generate_Visuals.ipynb`): [MIT](LICENSE)
+* Data and figures (`data/`, `out/`): [CC BY 4.0](LICENSE-DATA)
+
+If you use the artifacts or the code, please cite the paper above.
